@@ -21,7 +21,7 @@ _pdbx_contact_author.name_mi             ?
 _pdbx_contact_author.name_salutation     . 
 _pdbx_contact_author.country             'United States' 
 _pdbx_contact_author.continent           ? 
-_pdbx_contact_author.phone               '(212) 555-1212
+_pdbx_contact_author.phone               '(212) 555-1212'
 _pdbx_contact_author.role                'principal investigator/group leader' 
 _pdbx_contact_author.organization_type   academic 
 _pdbx_contact_author.identifier_ORCID    0000-1234-5678-1856 
