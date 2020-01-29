@@ -203,8 +203,8 @@ pdbx_chem_comp_audit        date                                datetime 1 1 15 
 pdbx_chem_comp_audit        annotator                           char     0 0 10  0 
 pdbx_chem_comp_audit        action_type                         char     1 1 80  0 
 pdbx_chem_comp_synonyms     Component_ID                        char     1 1 10  0 
-pdbx_chem_comp_synonyms     ordinal                             int      0 0 10  0 
-pdbx_chem_comp_synonyms     name                                text     1 1 1024 0 
+pdbx_chem_comp_synonyms     ordinal                             int      1 1 10  0 
+pdbx_chem_comp_synonyms     name                                text     0 0 1024 0 
 pdbx_chem_comp_synonyms     comp_id                             char     1 1 10  0 
 pdbx_chem_comp_synonyms     provenance                          char     0 0 80  0 
 pdbx_chem_comp_synonyms     type                                char     0 0 80  0 
