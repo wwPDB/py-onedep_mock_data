@@ -32,6 +32,7 @@ pdbx_chem_comp_audit        0 pdbx_group      1 1
 pdbx_chem_comp_synonyms     0 chem_comp_group 1 1 
 pdbx_chem_comp_related      0 chem_comp_group 1 1 
 pdbx_chem_comp_atom_related 0 chem_comp_group 1 1 
+pdbx_chem_comp_feature      0 pdbx_group      1 1 
 rcsb_tableinfo              0 rcsb_group      1 1 
 rcsb_columninfo             0 rcsb_group      1 1 
 # 
@@ -220,6 +221,12 @@ pdbx_chem_comp_atom_related ordinal                             int      1 1 10 
 pdbx_chem_comp_atom_related atom_id                             char     0 0 6   0 
 pdbx_chem_comp_atom_related related_atom_id                     char     0 0 6   0 
 pdbx_chem_comp_atom_related related_type                        char     0 0 80  0 
+pdbx_chem_comp_feature      Component_ID                        char     1 1 10  0 
+pdbx_chem_comp_feature      comp_id                             char     1 1 10  0 
+pdbx_chem_comp_feature      type                                char     1 1 80  0 
+pdbx_chem_comp_feature      support                             text     0 0 200 0 
+pdbx_chem_comp_feature      value                               text     1 1 200 0 
+pdbx_chem_comp_feature      source                              char     1 1 80  0 
 rcsb_tableinfo              tablename                           char     1 1 30  0 
 rcsb_tableinfo              description                         text     0 0 200 0 
 rcsb_tableinfo              type                                int      0 0 10  0 
@@ -338,6 +345,7 @@ pdbx_chem_comp_audit
 pdbx_chem_comp_synonyms     'PDBX_CHEM_COMP_SYNONYMS holds chemical name and synonym correspondences.' 
 pdbx_chem_comp_related      'PDBX_CHEM_COMP_RELATED describes the relationship between two chemical components.' 
 pdbx_chem_comp_atom_related 'PDBX_CHEM_COMP_ATOM_RELATED provides atom level nomenclature mapping between two related chemical components.' 
+pdbx_chem_comp_feature      'Additional features associated with the chemical component.' 
 rcsb_tableinfo              ? 
 rcsb_columninfo             ? 
 # 
@@ -1064,6 +1072,12 @@ pdbx_chem_comp_atom_related ordinal
 pdbx_chem_comp_atom_related atom_id                             'The atom identifier/name for the atom mapping' 'Missing example' 
 pdbx_chem_comp_atom_related related_atom_id                     'The atom identifier/name for the atom mapping in the related chemical component' 'Missing example' 
 pdbx_chem_comp_atom_related related_type                        'Describes the type of relationship' 'Missing example' 
+pdbx_chem_comp_feature      Component_ID                        'Structure identifier' 'Structure identifier' 
+pdbx_chem_comp_feature      comp_id                             'The component identifier for this feature.' ABC 
+pdbx_chem_comp_feature      type                                'The component feature type.' FUNCTION 
+pdbx_chem_comp_feature      support                             'The supporting evidence for this feature.' 'Biological assay' 
+pdbx_chem_comp_feature      value                               'The component feature value.' 'Missing example' 
+pdbx_chem_comp_feature      source                              'The information source for the component feature.' PDB 
 rcsb_tableinfo              tablename                           'SQL table name.' structure_summary 
 rcsb_tableinfo              description                         'SQL table description.' 'Table of solvent coordinates' 
 rcsb_tableinfo              type                                'SQL table type.' '0=general, 1=coordinate, 2=derived, 3=schema' 
@@ -1268,6 +1282,12 @@ pdbx_chem_comp_atom_related ordinal                             1 1 1
 pdbx_chem_comp_atom_related atom_id                             3 1 1 
 pdbx_chem_comp_atom_related related_atom_id                     3 1 1 
 pdbx_chem_comp_atom_related related_type                        5 1 1 
+pdbx_chem_comp_feature      Component_ID                        3 1 1 
+pdbx_chem_comp_feature      comp_id                             3 1 1 
+pdbx_chem_comp_feature      type                                5 1 1 
+pdbx_chem_comp_feature      support                             5 1 1 
+pdbx_chem_comp_feature      value                               5 1 1 
+pdbx_chem_comp_feature      source                              5 1 1 
 rcsb_tableinfo              tablename                           3 1 1 
 rcsb_tableinfo              description                         5 1 1 
 rcsb_tableinfo              type                                1 1 1 
@@ -1470,6 +1490,12 @@ pdbx_chem_comp_atom_related ordinal                             '_pdbx_chem_comp
 pdbx_chem_comp_atom_related atom_id                             '_pdbx_chem_comp_atom_related.atom_id'           ? ?               
 pdbx_chem_comp_atom_related related_atom_id                     '_pdbx_chem_comp_atom_related.related_atom_id'   ? ?               
 pdbx_chem_comp_atom_related related_type                        '_pdbx_chem_comp_atom_related.related_type'      ? ?               
+pdbx_chem_comp_feature      Component_ID                        ?                                                ? 'datablockid()' 
+pdbx_chem_comp_feature      comp_id                             '_pdbx_chem_comp_feature.comp_id'                ? ?               
+pdbx_chem_comp_feature      type                                '_pdbx_chem_comp_feature.type'                   ? ?               
+pdbx_chem_comp_feature      support                             '_pdbx_chem_comp_feature.support'                ? ?               
+pdbx_chem_comp_feature      value                               '_pdbx_chem_comp_feature.value'                  ? ?               
+pdbx_chem_comp_feature      source                              '_pdbx_chem_comp_feature.source'                 ? ?               
 rcsb_tableinfo              tablename                           '_rcsb_tableinfo.tablename'                      ? ?               
 rcsb_tableinfo              description                         '_rcsb_tableinfo.description'                    ? ?               
 rcsb_tableinfo              type                                '_rcsb_tableinfo.type'                           ? ?               
